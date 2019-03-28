@@ -8,7 +8,18 @@
         "packages": true
     },
     "bundleddirs": [
-        "libs/core"
+        "libs/base",
+        "libs/core",
+        "libs/core--samd",
+        "libs/accelerometer",
+        "libs/buttons",
+        "libs/light",
+        "libs/lightsensor",
+        "libs/jacdac",
+        "libs/jacdac-drivers",
+        "libs/servo",
+        "libs/touch",
+        "libs/button"
     ],
     "runtime": {
       "mathBlocks": true,

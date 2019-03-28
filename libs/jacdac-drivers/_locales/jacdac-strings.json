@@ -1,0 +1,7 @@
+{
+  "jacdac.SensorVirtualDriver.setStreaming|block": "jacdac %sensor set streaming %on",
+  "jacdac|block": "jacdac",
+  "{id:category}JacDacDriverStatus": "JacDacDriverStatus",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:group}Input": "Input"
+}
