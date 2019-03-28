@@ -148,7 +148,7 @@
             "editor.background": "#ecf0f1"
         },
         "allowPackageExtensions": true,
-        "extendEditor": true,
+        "extendEditor": false,
         "crowdinProject": "kindscript",
         "scriptManager": true,
         "simScreenshot": true,
