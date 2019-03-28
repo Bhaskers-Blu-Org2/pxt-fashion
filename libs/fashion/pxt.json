@@ -1,0 +1,11 @@
+{
+    "name": "fashion",
+    "files": [
+        "fashion.ts"
+    ],
+    "dependencies": {
+        "core": "file:../core",
+        "jacdac": "file:../jacdac",
+        "jacdac-drivers": "file:/jacdac-drivers"
+    }
+}

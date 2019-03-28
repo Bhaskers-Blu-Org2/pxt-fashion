@@ -25,7 +25,8 @@
         "libs/jacdac-drivers",
         "libs/servo",
         "libs/touch",
-        "libs/button"
+        "libs/button",
+        "libs/fashion"
     ],
     "serial": {
         "useHF2": true,
