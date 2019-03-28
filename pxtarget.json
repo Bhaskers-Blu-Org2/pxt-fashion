@@ -5,7 +5,13 @@
     "corepkg": "core",
     "cloud": {
         "workspace": false,
-        "packages": true
+        "packages": true,
+        "sharing": true,
+        "thumbnails": true,
+        "publishing": true,
+        "importing": true,
+        "preferredPackages": [],
+        "githubPackages": true
     },
     "bundleddirs": [
         "libs/base",
@@ -21,6 +27,22 @@
         "libs/touch",
         "libs/button"
     ],
+    "serial": {
+        "useHF2": true,
+        "useEditor": true,
+        "log": true,
+        "editorTheme": {
+            "graphBackground": "#d9d9d9",
+            "lineColors": [
+                "#CC2936",
+                "#FFC914",
+                "#2EB7ED",
+                "#FB48C7",
+                "#08415C",
+                "#C200C0"
+            ]
+        }
+    },
     "runtime": {
       "mathBlocks": true,
       "loopsBlocks": true,
@@ -28,17 +50,87 @@
       "variablesBlocks": true,
       "textBlocks": false,
       "functionBlocks": false,
-      "listsBlocks": false 
+      "listsBlocks": false,
+      "onStartNamespace": "loops",
+      "onStartColor": "#40bf4a",
+      "onStartWeight": 100,
+      "pauseUntilBlock": {
+          "category": "loops"
+      }
     },
     "simulator": {
         "autoRun": true
     },
-    "appTheme": {
+    "compile": {
+        "isNative": true,
+        "useUF2": true,
+        "webUSB": true,
+        "gc": true,
+        "hasHex": true,
+        "saveAsPNG": true,
+        "deployDrives": ".*",
+        "deployFileMarker": "INFO_UF2.TXT",
+        "driveName": "DRIVE",
+        "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
+        "flashChecksumAddr": 8372,
+        "flashCodeAlign": 256
+    },
+    "compileService": {
+        "buildEngine": "codal",
+        "codalTarget": {
+            "name": "codal-circuit-playground",
+            "url": "https://github.com/lancaster-university/codal-circuit-playground",
+            "branch": "v1.5.6",
+            "type": "git",
+            "branches": {
+                "https://github.com/lancaster-university/codal-core": "dbf2121bdde4131f2aedd23e93811858c6f05b23"
+            }
+        },
+        "codalBinary": "CIRCUIT_PLAYGROUND",
+        "yottaConfig": {
+            "pxt": {
+                "board": {
+                    "id": "BOARD_ID_CPLAY"
+                }
+            }
+        },
+        "githubCorePackage": "lancaster-university/codal",
+        "gittag": "v0.6.1",
+        "serviceId": "codal2cp",
+        "dockerImage": "pext/yotta:latest"
+    },
+    "variants": {
+        "samd21": {
+            "compile": {
+                "hasHex": true,
+                "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
+                "openocdScriptAlt": "source [find interface/stlink-v2.cfg]; set CPUTAPID 0x0bc11477; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
+                "vtableShift": 4,
+                "gc": true,
+                "uf2Family": "0x68ed2b88"
+            },
+            "compileService": {
+                "codalTarget": {
+                    "name": "codal-circuit-playground",
+                    "url": "https://github.com/lancaster-university/codal-circuit-playground",
+                    "branch": "v1.5.4-samd-peripherals.10",
+                    "type": "git"
+                },
+                "dockerImage": "pext/yotta:latest",
+                "codalBinary": "CIRCUIT_PLAYGROUND"
+            }
+        }
+    },
+    "appTheme": {        
+        "homeUrl": "https://fashion.makecode.com/",
+        "embedUrl": "https://fashion.makecode.com/",
         "logoUrl": "https://github.com/Microsoft/pxt-sample",
-        "homeUrl": "http://microsoft.github.io/pxt-sample/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "betaUrl": "https://makecode.com/",
+        "githubUrl": "https://github.com/Microsoft/pxt-fashion",
+        "feedbackUrl": "https://github.com/Microsoft/pxt-maker/issues",
+        "betaUrl": "https://github.com/Microsoft/pxt-fashion",
+
         "docMenu": [
             {
                 "name": "About",
@@ -64,13 +156,21 @@
         },
         "simAnimationEnter": "fly right in",
         "simAnimationExit": "fly right out",
-        "scriptManager": true,
         "debugger": true,
         "print": true,
         "highContrast": true,
         "greenScreen": true,
         "monacoColors": {
             "editor.background": "#ecf0f1"
-        }
+        },
+        "allowPackageExtensions": true,
+        "extendEditor": true,
+        "crowdinProject": "kindscript",
+        "scriptManager": true,
+        "simScreenshot": true,
+        "simGif": true,
+        "experiments": [
+            "python"
+        ]
     }
 }
