@@ -13,7 +13,7 @@
   "JacDacDriverStatus.isPairedInstanceAddress": "If paired, paired instance address",
   "JacDacDriverStatus.setBridge": "Set driver as bridge",
   "JacDacDriverStatus.setError": "Sets the error state on the device",
-  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.\n\nJACDAC protocol support",
+  "jacdac": "JACDAC protocol support",
   "jacdac.Client.setSerialNumber": "Specifies the serial number that this virtual driver should bind to",
   "jacdac.ConsoleService": "Console logging driver. The driver is off, broadcasting or listening. Cannot do both.",
   "jacdac.ConsoleService.setMode": "Sets the console service mode",

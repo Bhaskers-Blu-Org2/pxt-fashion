@@ -1,5 +1,5 @@
 {
-  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.\n\nJACDAC protocol support",
+  "jacdac": "JACDAC protocol support",
   "jacdac.AccelerometerClient.get": "Reads a value of the sensor",
   "jacdac.AccelerometerClient.get|param|dimension": "which channel to read",
   "jacdac.AccelerometerClient.onEvent": "Runs code when an event happens on the sensor",

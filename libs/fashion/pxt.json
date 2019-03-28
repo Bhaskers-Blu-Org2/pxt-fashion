@@ -7,6 +7,6 @@
     "dependencies": {
         "core": "file:../core",
         "jacdac": "file:../jacdac",
-        "jacdac-drivers": "file:/jacdac-drivers"
+        "jacdac-drivers": "file:../jacdac-drivers"
     }
 }

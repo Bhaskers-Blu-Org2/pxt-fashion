@@ -22,7 +22,7 @@
   "SPI.setMode": "Sets the SPI bus mode",
   "SPI.transfer": "Transfer buffers over the SPI bus",
   "SPI.write": "Write to the SPI bus",
-  "control": "Program controls and events.",
+  "control": "Program controls and events.\n\nControl flow",
   "control.Timer": "A timer",
   "control.Timer.millis": "Gets the elapsed time in millis since the last reset",
   "control.Timer.pauseUntil": "Pauses until the timer reaches the given amount of milliseconds",

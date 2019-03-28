@@ -1,6 +1,6 @@
 {
     "id": "fashion",
-    "name": "Fashin",
+    "name": "Fashion",
     "title": "MakeCode Editor for Fashion Garments",
     "corepkg": "core",
     "cloud": {
@@ -16,7 +16,7 @@
     "bundleddirs": [
         "libs/base",
         "libs/core",
-        "libs/core--samd",
+        "libs/core---samd",
         "libs/accelerometer",
         "libs/buttons",
         "libs/light",
@@ -25,7 +25,6 @@
         "libs/jacdac-drivers",
         "libs/servo",
         "libs/touch",
-        "libs/button",
         "libs/fashion",
         "libs/bead-brain"
     ],

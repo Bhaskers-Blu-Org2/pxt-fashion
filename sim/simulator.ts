@@ -22,19 +22,11 @@ namespace pxsim {
     export class Board extends pxsim.BaseBoard {
         public bus: EventBus;
         public element : SVGSVGElement;
-        public spriteElement: SVGCircleElement;
-        public hareElement: SVGCircleElement;
-        public sprite : Sprite;
-        public hare: Sprite;
         
         constructor() {
             super();
             this.bus = new EventBus(runtime);
             this.element = <SVGSVGElement><any>document.getElementById('svgcanvas');
-            this.spriteElement = <SVGCircleElement>this.element.getElementById('svgsprite');
-            this.hareElement = <SVGCircleElement>this.element.getElementById('svgsprite2');
-            this.sprite = new Sprite()
-            this.hare = new Sprite();
         }
         
         initAsync(msg: pxsim.SimulatorRunMessage): Promise<void> {
@@ -45,11 +37,6 @@ namespace pxsim {
         }       
         
         updateView() {
-            this.spriteElement.cx.baseVal.value = this.sprite.x;
-            this.spriteElement.cy.baseVal.value = this.sprite.y;
-
-            this.hareElement.cx.baseVal.value = this.hare.x;
-            this.hareElement.cy.baseVal.value = this.hare.y;
         }
     }
 }
