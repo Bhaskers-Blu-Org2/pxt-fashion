@@ -26,7 +26,8 @@
         "libs/servo",
         "libs/touch",
         "libs/button",
-        "libs/fashion"
+        "libs/fashion",
+        "libs/bead-brain"
     ],
     "serial": {
         "useHF2": true,

@@ -1,6 +1,7 @@
 {
     "name": "fashion",
     "files": [
+        "beads.ts",
         "fashion.ts"
     ],
     "dependencies": {
